@@ -1,0 +1,6 @@
+rixface.dep
+rixface.elf
+rixface.map
+*.o
+*.ps-exe
+build.log

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A4046"/><stop offset="1" stop-color="#23272B"/>
+    </linearGradient>
+    <linearGradient id="visor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFC56A"/><stop offset="0.5" stop-color="#FFA724"/><stop offset="1" stop-color="#C77A0E"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-80%" width="160%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="tglow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" fill="#14171A"/>
+  <!-- ears -->
+  <path d="M150 210 L118 52 L232 150 Z" fill="url(#plate)" stroke="#545C64" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M362 210 L394 52 L280 150 Z" fill="url(#plate)" stroke="#545C64" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M158 182 L134 88 L212 154 Z" fill="#23272B"/>
+  <path d="M354 182 L378 88 L300 154 Z" fill="#23272B"/>
+  <!-- head: skull, cheek plates, muzzle -->
+  <path d="M256 128 C330 128 372 168 384 222 L414 270 L360 300 L300 382 L256 410 L212 382 L152 300 L98 270 L128 222 C140 168 182 128 256 128 Z"
+        fill="url(#plate)" stroke="#545C64" stroke-width="3" stroke-linejoin="round"/>
+  <!-- cheek plate seams -->
+  <path d="M128 222 L170 262 L152 300" fill="none" stroke="#545C64" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M384 222 L342 262 L360 300" fill="none" stroke="#545C64" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- muzzle plate -->
+  <path d="M206 272 L256 262 L306 272 L292 360 L256 392 L220 360 Z" fill="#3A4046" stroke="#545C64" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- jaw seam: where a jaw would articulate, it doesn't -->
+  <path d="M212 330 L226 358" fill="none" stroke="#14171A" stroke-width="1.6"/>
+  <path d="M300 330 L286 358" fill="none" stroke="#14171A" stroke-width="1.6"/>
+  <!-- nose cap -->
+  <path d="M240 372 L272 372 L256 394 Z" fill="#23272B" stroke="#545C64" stroke-width="2" stroke-linejoin="round"/>
+  <!-- visor: one band, no eyes -->
+  <path d="M138 214 C190 196 322 196 374 214 L366 246 C318 232 194 232 146 246 Z" fill="#0E1012"/>
+  <path d="M146 218 C196 202 316 202 366 218 L360 240 C314 228 198 228 152 240 Z" fill="url(#visor)" filter="url(#glow)"/>
+  <!-- trace-lines, catching stage: a few lit -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M256 140 L256 176 L236 192" stroke="#46E86A" stroke-width="2.4" filter="url(#tglow)"/>
+    <path d="M256 176 L276 192" stroke="#46E86A" stroke-width="2.4" filter="url(#tglow)"/>
+    <path d="M172 252 L196 268 L196 300" stroke="#46E86A" stroke-width="2" opacity="0.85" filter="url(#tglow)"/>
+    <path d="M340 252 L316 268 L316 300" stroke="#2E5A3A" stroke-width="2"/>
+    <path d="M232 282 L232 330 L246 344" stroke="#2E5A3A" stroke-width="2"/>
+    <path d="M280 282 L280 330 L266 344" stroke="#2E5A3A" stroke-width="2"/>
+    <path d="M150 120 L178 150" stroke="#2E5A3A" stroke-width="2"/>
+    <path d="M362 120 L334 150" stroke="#2E5A3A" stroke-width="2"/>
+  </g>
+</svg>
